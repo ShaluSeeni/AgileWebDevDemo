@@ -1,0 +1,18 @@
+#signup-form
+{
+ background-color: brown;
+}
+
+#exisitingGroups
+{
+    background-color: bisque;
+}
+
+.studentname:hover
+{
+    font-weight: 800;
+}
+
+.ejectButton{
+    background-color: aquamarine;
+}
