@@ -1,11 +1,17 @@
-function sayHi{
-    alert ("Hi2");
-    alert ("Hi3");
+var numberOfStudentsEjected = 0;
+
+function sayHi() { 
+    alert("Hi2");
+    alert("Hi3");
 }
 
-function factorial(n){
-    let rec = factorial(n-1);
-    return n * rec; 
+function ejectStudent() {
+    //Update the database
+    numberOfStudentsEjected += 1;
+    displayNumberOfStudentsEjected(); 
 }
 
-alert(5);
+function displayNumberOfStudentsEjected() {
+    alert ("Number of Students : "+ numberOfStudentsEjected);
+}
+
