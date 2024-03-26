@@ -1,75 +1,87 @@
 <html>
     <head>
-<link rel="stylesheet" href="test.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="test.css"> 
+<script>
+   function sayHi(){
+      alert("Hi2");
+      alert("Hi3");
+   }
+</script>
     </head>
     <body>
-       
-       <h1> Group project sign-up </h1> 
-       <div id="signup-form"> 
-       <h2> Sign Up </h2>
-       <p>Enter the student numbers of the people in your group </p>
-       <p>It is not required to have 4 people, you will be assigned members to fill out your group</p>
-       <form action="/submitGroup">
-        <label for="numberOfStudents"> Number of students so far</label>
-        <!--<input type="number" id="numberOfStudents" min=1 max=4>-->
-        <select name="numberOfStudents" id="numberofStudents">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-          </select>
-          
-        <br>
+      <div class ="container">
+         <div id ="title">
+         <h1> Group project sign-up </h1> 
+         </div>
+         <div id="signup-form"> 
+         <h2> Sign Up </h2>
+         <p>Enter the student numbers of the people in your group </p>
+         <p>It is not required to have 4 people, you will be assigned members to fill out your group</p>
+         <form action="/submitGroup">
+         <label for="numberOfStudents"> Number of students so far</label>
+         <!--<input type="number" id="numberOfStudents" min=1 max=4>-->
+         <select name="numberOfStudents" id="numberofStudents">
+               <option value="1">1</option>
+               <option value="2">2</option>
+               <option value="3">3</option>
+               <option value="4">4</option>
+            </select>
+            
+         <br>
 
-        <label for="student1">Student 1:</label>
-        <input type="number" id ="student1"></input>
-        
-        <br>
-        <label for="student2">Student 2:</label>
-        <input type="number" id ="student2"></input>
-        
-        <br>
-        <label for="student3">Student 3:</label>
-        <input type="number" id ="student3"></input>
-        
-        <br>
-        <label for="student4">Student 4:</label>
-        <input type="number" id ="student4"></input>
+         <label for="student1">Student 1:</label>
+         <input type="number" id ="student1"></input>
+         
+         <br>
+         <label for="student2">Student 2:</label>
+         <input type="number" id ="student2"></input>
+         
+         <br>
+         <label for="student3">Student 3:</label>
+         <input type="number" id ="student3"></input>
+         
+         <br>
+         <label for="student4">Student 4:</label>
+         <input type="number" id ="student4"></input>
 
-        <br>
-        <input type="submit">
-    </form>
-   </div>
+         <br>
+         <input class ="btn btn-success  " id="submitBtn" type="submit">
+      </form>
+      </div>
 
-   <div id="exisitingGroups">
-    <h2> Exisitng Groups</h2>
-    <table>
-         <tr>
-            <th>Group ID </th>
-            <th>Student 1 </th>
-            <th>Student 2 </th>
-            <th>Student 3 </th>
-            <th>Student 4 </th>
-         </tr>
-         <tr>
-            <td> 1</td>
-            <td> <span class="studentname">Rose</span> (12345678) </td>
-            <td> <span class="studentname">Bob</span>  (23456789) </td>
-            <td> <span class="studentname">Mike</span> (34567890) </td>
-            <td> <span class="studentname">Chris </span>  (45678901) </td> 
-         </tr>
-         <tr>
-            <td> 2</td>
-            <td> <span class="studentname">nish</span>1234567 </td>
-            <td> <span class="studentname">angie</span> 2345678</td>
-            <td> <span class="studentname">subbu</span> 3456789</td>
-            <td> <span class="studentname">samantha</span> 4567890</td> 
-         </tr>
-    </table>
+      <div id="exisitingGroups">
+      <h2> Exisitng Groups</h2>
+      <table>
+            <tr>
+               <th>Group ID </th>
+               <th>Student 1 </th>
+               <th>Student 2 </th>
+               <th>Student 3 </th>
+               <th>Student 4 </th>
+            </tr>
+            <tr>
+               <td> 1</td>
+               <td> <span class="studentname">Rose</span> (12345678) </td>
+               <td> <span class="studentname">Bob</span>  (23456789) </td>
+               <td> <span class="studentname">Mike</span> (34567890) </td>
+               <td> <span class="studentname">Chris </span>  (45678901) </td> 
+            </tr>
+            <tr>
+               <td> 2</td>
+               <td> <span class="studentname">nish</span>1234567 </td>
+               <td> <span class="studentname">angie</span> 2345678</td>
+               <td> <span class="studentname">subbu</span> 3456789</td>
+               <td> <span class="studentname">samantha</span> 4567890</td> 
+            </tr>
+      </table>
+      </div>
    </div>
    
    Kick out:
-   <button class="studentname ejectButton"> Jerry</button>
+   <button class="btn btn-danger studentName ejectButton" onclick ="sayHi()">
+      <span class="glyphicon glyphicon-search"></span> Eject
+   </button>
     
     </body>
 </html >

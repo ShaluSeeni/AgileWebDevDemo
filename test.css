@@ -1,6 +1,6 @@
 #signup-form
 {
- background-color: brown;
+ background-color: rgb(228, 132, 198);
 }
 
 #exisitingGroups
@@ -15,4 +15,19 @@
 
 .ejectButton{
     background-color: aquamarine;
+}
+
+label {
+    color: red;
+}
+
+#title {
+    display : flex;
+    justify-content : center; 
+}
+
+#submitBtn{
+    position: relative;
+    left: 10px;
+    bottom: 0px;
 }
