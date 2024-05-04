@@ -1,0 +1,41 @@
+<html>
+    <head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="/static/test.css"> 
+<script src="/static/test.js"></script>
+    </head>
+    <body>
+      <div class ="container">
+         <div id ="title">
+         <h1> Group projects </h1> 
+         </div>
+         
+      <div id="exisitingGroups">
+      <h2> Exisitng Groups</h2>
+      <table>
+            <tr>
+               <th>Group ID </th>
+               <th>Student 1 </th>
+               <th>Student 2 </th>
+               <th>Student 3 </th>
+               <th>Student 4 </th>
+            </tr>
+            {% for group in groups %}
+            <tr>
+               <td> 1</td>
+               {% for student in group.students %}
+               <td> <span class="studentname"> {{ student.name}} </span> ({{student.uwaId}}) </td>
+               {% endfor %} 
+            </tr>
+            {% endfor %}
+      </table>
+      </div>
+   </div>
+   
+
+   <button class="btn btn-danger studentName ejectButton" onclick ="location.href='{{ url_for('create') }}'">
+      <span class="glyphicon glyphicon-search"></span> Create Group
+   </button>
+    
+    </body>
+</html > 
